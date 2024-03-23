@@ -126,3 +126,14 @@ DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-user-model
 AUTH_USER_MODEL = "users.User"
+
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+
+# https://docs.djangoproject.com/en/5.0/ref/settings/#email-host
+# EMAIL_HOST = "..."
+
+# https://docs.djangoproject.com/en/5.0/ref/settings/#email-port
+EMAIL_PORT = 1025
+
+DEFAULT_FROM_EMAIL = "Do Not Reply <no-reply@example.co.zm>"

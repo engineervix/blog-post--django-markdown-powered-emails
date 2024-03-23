@@ -1,0 +1,34 @@
+{
+  "name": "blog-post--django-markdown-powered-emails",
+  "version": "0.0.0",
+  "description": "Markdown-powered emails in Django -- an example Django application to illustrate the concept",
+  "scripts": {
+    "dev": "maildev -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engineervix/blog-post--django-markdown-powered-emails.git"
+  },
+  "keywords": [
+    "django",
+    "markdown",
+    "email"
+  ],
+  "author": "Victor Miti",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/engineervix/blog-post--django-markdown-powered-emails/issues"
+  },
+  "homepage": "https://github.com/engineervix/blog-post--django-markdown-powered-emails#readme",
+  "engines": {
+    "node": ">= 20 <21",
+    "npm": ">= 10"
+  },
+  "volta": {
+    "node": "20.11.1"
+  },
+  "devDependencies": {
+    "maildev": "^2.1.0"
+  }
+}
