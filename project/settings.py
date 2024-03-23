@@ -12,9 +12,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 
+PROJECT_DIR = Path(__file__).resolve().parent
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
+BASE_DIR = PROJECT_DIR.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "crispy_forms",  # https://github.com/django-crispy-forms/django-crispy-forms
+    "crispy_bootstrap5",  # https://github.com/django-crispy-forms/crispy-bootstrap5
 ]
 
 MIDDLEWARE = [
@@ -57,7 +59,9 @@ ROOT_URLCONF = "project.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+            PROJECT_DIR / "templates",
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -118,8 +122,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+# this is where Django *looks for* static files
+STATICFILES_DIRS = [
+    PROJECT_DIR / "assets",
+]
+# this is where static files are *collected*
+STATIC_ROOT = PROJECT_DIR / "static"
+
 # this is the *URL* for static files
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -128,6 +139,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-user-model
 AUTH_USER_MODEL = "users.User"
+
+LOGIN_REDIRECT_URL = "home"
+# https://docs.djangoproject.com/en/5.0/ref/settings/#logout-redirect-url
+LOGOUT_REDIRECT_URL = "home"
+# https://docs.djangoproject.com/en/5.0/ref/settings/#login-url
+LOGIN_URL = "login"
 
 # EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
@@ -139,3 +156,7 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_PORT = 1025
 
 DEFAULT_FROM_EMAIL = "Do Not Reply <no-reply@example.co.zm>"
+
+# Crispy forms -- https://github.com/django-crispy-forms/django-crispy-forms
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"

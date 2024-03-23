@@ -16,8 +16,30 @@ Including another URLconf
 """
 
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 from django.urls import path
+
+from project.events.views import EventListingView, EventRegistrationView
+from project.users.forms import AuthenticationForm
+from project.users.views import LogoutView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", EventListingView.as_view(), name="home"),
+    path(
+        "register/<int:pk>/", EventRegistrationView.as_view(), name="event-registration"
+    ),
+    path(
+        "accounts/login/",
+        auth_views.LoginView.as_view(
+            form_class=AuthenticationForm,
+            template_name="accounts/login.html",
+        ),
+        name="login",
+    ),
+    path(
+        "accounts/logout/",
+        LogoutView.as_view(),
+        name="logout",
+    ),
 ]

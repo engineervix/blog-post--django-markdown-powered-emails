@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.utils.functional import cached_property
 from django.utils.translation import gettext_lazy as _
 
 from .managers import UserManager
@@ -26,3 +27,7 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.get_full_name()
+
+    @cached_property
+    def events(self):
+        return [registration.event for registration in self.event_registrations.all()]
