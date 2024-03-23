@@ -1,0 +1,16 @@
+Howdy {{ user }},
+
+This is to confirm that you have successfully registered for “{{ event.title }}”. Here are the details, for your reference:
+
+-----------------------------
+Event: {{ event.title }}
+Description: {{ event.description }}
+Date and Time: {{ event.date_and_time }}
+Location: {{ event.location }}
+-----------------------------
+
+We look forward to seeing you there!
+
+Cheers,
+
+— The Project Team

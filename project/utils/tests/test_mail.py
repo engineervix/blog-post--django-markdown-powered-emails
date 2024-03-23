@@ -3,7 +3,7 @@ from unittest.mock import mock_open, patch
 from django.core import mail
 from django.test import TestCase
 
-from project.events.mail import send_email
+from project.utils.mail import send_email
 
 template = "test_template.txt"
 content = "Hello {{ name }},\n\nHere is the content of my email."
