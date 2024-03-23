@@ -9,9 +9,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
-## Development
-
-### First things first
+## First things first
 
 I recommend you test this with **Python 3.12**, because that's what I used for this particular project. However, it _should_ hopefully work with lower Python versions such us 3.10 and 3.11. You can use [pyenv](https://github.com/pyenv/pyenv) to install multiple python versions on your machine.
 
@@ -29,7 +27,7 @@ You'll also need **Node.js 20** on your machine. You can use tools such as [nvm]
    npm install
    ```
 
-### Getting Started
+## Getting Started
 
 - Apply database migrations
 
