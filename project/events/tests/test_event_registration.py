@@ -21,6 +21,10 @@ class EventRegistrationTestCase(TestCase):
         self.assertEqual(sent_email.subject, "Event Registration for Test Event")
         self.assertEqual(sent_email.to, [user.email])
         self.assertIn(
+            "Howdy Jane Doe,",
+            sent_email.body,
+        )
+        self.assertIn(
             "you have successfully registered for “Test Event”",
             sent_email.body,
         )
