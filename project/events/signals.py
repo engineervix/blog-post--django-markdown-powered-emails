@@ -13,4 +13,5 @@ def send_email_notification(sender, instance, created, **kwargs):
             to_email_list=[instance.user.email],
             template="events/event_registration_notification_email.txt",
             context={"event": instance.event, "user": instance.user},
+            md_to_html=True,
         )
