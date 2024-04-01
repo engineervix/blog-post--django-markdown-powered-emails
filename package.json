@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "Markdown-powered emails in Django -- an example Django application to illustrate the concept",
   "scripts": {
-    "dev": "maildev -o"
+    "dev": "maildev -o",
+    "min": "sass --no-source-map --style compressed project/assets/css/github-markdown.css project/assets/css/github-markdown.min.css"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "node": "20.11.1"
   },
   "devDependencies": {
-    "maildev": "^2.1.0"
+    "maildev": "^2.1.0",
+    "sass": "^1.72.0"
   }
 }

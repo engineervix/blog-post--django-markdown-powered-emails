@@ -1,5 +1,7 @@
 # Core
 Django>=5.0,<5.1
+premailer==3.10.0
+pycmarkgfm==1.2.1
 
 # Forms
 django-crispy-forms==2.1

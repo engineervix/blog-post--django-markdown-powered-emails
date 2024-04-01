@@ -25,6 +25,6 @@ class EventRegistrationTestCase(TestCase):
             sent_email.body,
         )
         self.assertIn(
-            "you have successfully registered for “Test Event”",
+            'you have successfully registered for <strong style="font-weight:600">Test Event</strong>',
             sent_email.body,
         )
