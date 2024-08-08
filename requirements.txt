@@ -11,7 +11,7 @@ crispy-bootstrap5==2024.2
 honcho==1.1.0
 setuptools==69.5.1 # needed by honcho
 factory-boy>=3.3,<3.4
-Faker>=25.9,<25.10
+Faker>=26.3,<26.4
 
 # benchmarking
 cmarkgfm==2024.1.14
