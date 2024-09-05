@@ -9,7 +9,7 @@ crispy-bootstrap5==2024.2
 
 # Dev
 honcho==1.1.0
-setuptools==69.5.1 # needed by honcho
+setuptools==74.1.2 # needed by honcho
 factory-boy>=3.3,<3.4
 Faker>=25.9,<25.10
 
