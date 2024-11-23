@@ -14,7 +14,7 @@ factory-boy>=3.3,<3.4
 Faker>=25.9,<25.10
 
 # benchmarking
-cmarkgfm==2024.1.14
+cmarkgfm==2024.11.20
 markdown==3.7
 mistune==3.0.2
 commonmark==0.9.1
