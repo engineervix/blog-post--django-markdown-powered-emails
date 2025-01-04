@@ -16,7 +16,7 @@ Faker>=25.9,<25.10
 # benchmarking
 cmarkgfm==2024.11.20
 markdown==3.7
-mistune==3.0.2
+mistune==3.1.0
 commonmark==0.9.1
 mistletoe==1.4.0
 
