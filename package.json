@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/engineervix/blog-post--django-markdown-powered-emails#readme",
   "engines": {
-    "node": ">= 20 <21",
+    "node": ">= 20 <23",
     "npm": ">= 10"
   },
   "volta": {
-    "node": "20.11.1"
+    "node": "22.14.0"
   },
   "devDependencies": {
     "maildev": "^2.1.0",
