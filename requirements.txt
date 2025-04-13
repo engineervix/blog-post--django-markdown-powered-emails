@@ -4,7 +4,7 @@ premailer==3.10.0
 pycmarkgfm==1.2.1
 
 # Forms
-django-crispy-forms==2.3
+django-crispy-forms==2.4
 crispy-bootstrap5==2024.10
 
 # Dev
