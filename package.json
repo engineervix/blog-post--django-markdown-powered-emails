@@ -27,7 +27,7 @@
     "npm": ">= 10"
   },
   "volta": {
-    "node": "20.11.1"
+    "node": "20.19.1"
   },
   "devDependencies": {
     "maildev": "^2.1.0",
